@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle' //for documentation
+    id 'com.github.johnrengelman.shadow' version '5.1.0' //shadowJar for pack up an executable file
+    id 'org.openjfx.javafxplugin' version '0.0.7' //javaFx for rendering
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion = '8.23'
+}
+
+shadowJar {
+    archiveBaseName = "mid"
+    archiveVersion = "v1.1"
+    archiveClassifier = null
+    archiveAppendix = null
+}
+
+group 'seedu.duke'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    // Change this to your main class.
+    mainClassName = "Duke"
+}
