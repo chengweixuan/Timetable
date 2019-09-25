@@ -1,5 +1,4 @@
 T | 0 | shit
-E | 0 | shitposting  | 1/12/2009 2232 | 1/12/2009 2234
 D | 0 | Duke Documentation  | 17/9/2019 2359
 E | 0 | code jam  | 6/6/2011 1100 | 7/7/2011 1400
 T | 0 | some stuff
