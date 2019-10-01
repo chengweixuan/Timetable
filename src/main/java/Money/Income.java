@@ -1,13 +1,16 @@
 package Money;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Income extends Item {
     private Date payday;
+    private SimpleDateFormat simpleDateFormat;
 
     public Income(float price, String description, Date payday) {
         super(price, description);
         this.payday = payday;
+        simpleDateFormat  = new SimpleDateFormat("d/M/yyyy");
     }
 
     public Date getPayday() {
@@ -17,6 +20,10 @@ public class Income extends Item {
     @Override
     public String toString() {
         return "[I]" + " " + super.getDescription() + "(salary: $" + super.getPrice() + ") (Paid On: " +
-                getPayday() + ")";
+                getPaidTime() + ")";
+    }
+
+    public String getPaidTime() {
+        return simpleDateFormat.format(payday);
     }
 }

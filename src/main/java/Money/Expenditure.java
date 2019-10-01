@@ -13,7 +13,7 @@ public class Expenditure extends Item {
         super(price, description);
         this.category = category;
         this.boughtTime = boughtTime;
-        simpleDateFormat  = new SimpleDateFormat("d/M/yyyy HHmm");
+        simpleDateFormat  = new SimpleDateFormat("d/M/yyyy");
     }
 
     @Override
